@@ -1,5 +1,6 @@
 package com.portal.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,13 +10,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@NoArgsConstructor @Data
-public class City {
-	
+@Data @NoArgsConstructor
+public class Role {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private String name;
-
+	@Column(name = "role_name")
+	private String roleName;
 }

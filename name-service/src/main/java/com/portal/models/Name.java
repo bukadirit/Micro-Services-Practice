@@ -31,14 +31,11 @@ public class Name {
 	@Column(name = "street_address")
 	private String address;
 	
-	/*
-	 * @Column(name = "city_id") private int cityId;
-	 */
-	
 	private int zip;
 	
-	@Column(name = "employee_role")
-	private int role;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "role_id")
+	private Role role;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "city_id")
