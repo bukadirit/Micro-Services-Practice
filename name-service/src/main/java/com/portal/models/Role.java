@@ -19,4 +19,13 @@ public class Role {
 	
 	@Column(name = "role_name")
 	private String roleName;
+	
+	/*
+	 * @ManyToMany(mappedBy="role") private Set<Name> name;
+	 */
+	/*
+	 * @ManyToMany
+	 * 
+	 * @JoinTable private List<Name> name;
+	 */
 }
